@@ -398,6 +398,9 @@ box-shadow: 0px 0px 45px -11px transparent;
 .circle50{
     border-radius: 50%;
 }
+.circle{
+  border-radius: 50px;
+}
 
 .light{
     color:black!important;
