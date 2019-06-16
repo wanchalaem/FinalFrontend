@@ -28,14 +28,15 @@ let load = await axios.get('/api/order_detail/')
     }, 
 
     
-    async getDataById(context, params) {
-        let load = await axios.post('/api/findById/',  {date:params})
-            .then((r) =>  {
-                state.order_detail = r.data
-            }).catch((e) =>  {
-                console.log('Error Data'); 
+async getDataById(context, params) {
+    let load = await axios.post('/api/findById/',  {date:params})
+        .then((r) =>  {
+            state.order_detail = r.data
+        }).catch((e) =>  {
+            console.log('Error Data'); 
         }); 
-            }, 
+        }, 
+
 
 
 async updateData(context, params) {

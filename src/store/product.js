@@ -5,6 +5,10 @@ const state = {
     product: [],
     productChoose:[],
     priceCalculate:0,
+    productCount:0,
+    topdownMenu:[],
+    downMenu:[],
+     
 }
 const getters = {
 
@@ -47,6 +51,34 @@ async calculateData(context,params){
 },
 
 
+async countAllMenu() {
+    let load = await axios.get('/api/countMenu/')
+        .then((r) => {
+            state.productCount = r.data
+        }).catch((e) => {
+            console.log('Error Data');
+    });
+        },
+
+async topMenuTop(){
+    let load = await axios.get('/api/top/')
+    .then((r) => {
+        state.topdownMenu = r.data
+    }).catch((e) => {
+        console.log('Error Data');
+});
+},
+
+async lowMenu(){
+    let load = await axios.get('/api/top?type=down/')
+    .then((r) => {
+        state.downMenu = r.data
+    }).catch((e) => {
+        console.log('Error Data');
+});
+},
+
+
 async getData() {
 let load = await axios.get('/api/product/')
     .then((r) => {
@@ -55,6 +87,8 @@ let load = await axios.get('/api/product/')
         console.log('Error Data');
 });
     },
+
+
 
 async storeData(context, params) {
     let load = await axios.post('/api/product/', params)

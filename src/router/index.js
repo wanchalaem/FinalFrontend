@@ -41,6 +41,11 @@ export default new Router({
             name: 'users',
             component: loadView('users')
         },  //PJ ใหม่อันใหม่
+        {
+            path: '/dashboard',
+            name: 'dashboard',
+            component: loadView('dashboard')
+        },  //PJ ใหม่อันใหม่
         
         { path: '/testcrud1',component: TestCrud1 },
           

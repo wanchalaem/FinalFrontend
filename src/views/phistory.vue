@@ -17,6 +17,7 @@
     </v-toolbar>
 
     <!-- <pre>{{dateFind}}</pre> -->
+    <!-- <pre>{{gruopAmount}}</pre> -->
     <v-container grid-list-xs>
       <!-- <v-text-field v-model="dateFind" type="date" @input="load()"></v-text-field> -->
       <center>
@@ -98,6 +99,7 @@
       return {
         menu: false,
         dateFind: '',
+        totalAmount: '',
       };
 
     },
@@ -127,7 +129,7 @@
           this.goToDefault();
         }
         await this.$store.dispatch('order_detail/getDataById', this.dateFind);
-      },
+      }, 
 
     },
   }

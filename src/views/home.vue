@@ -5,6 +5,9 @@
             <v-layout row wrap>
             </v-layout>
             <v-toolbar-items>
+                <v-btn flat @click="$router.push('/dashboard')">
+                    <h4>แดชบอร์ด</h4>
+                </v-btn>
                 <v-btn flat @click="$router.push('/')">
                     <h4>หน้าหลัก</h4>
                 </v-btn>
