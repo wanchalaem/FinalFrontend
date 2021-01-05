@@ -13,7 +13,7 @@
     "@babel/polyfill": "^7.0.0-rc.1",
     "@mdi/font": "^2.8.94",
     "animate.css": "^3.7.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "cordova-android": "^7.1.1",
     "cordova-plugin-camera": "^4.0.3",
     "cordova-plugin-file": "^6.0.1",
